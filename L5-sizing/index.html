@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sizing</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            /* this covers whole laptop */
+            box-sizing: border-box;
+            border: 2px solid black;
+            background-color: aquamarine;
+            /* width: 1536px; this covers exact width of my lap 
+            ->auto allign it in the center bcz of 80vw
+            */
+            width: 80vw;
+            height: 10vh;
+            margin:auto;
+        }
+        .newbox{
+          
+            box-sizing: border-box;
+            border: 2px solid black;
+            background-color: aquamarine;
+            /*->23px is top bottom px auto is sideways 
+            ->font-size: default its 16px
+            ->minheight means minimum heigh will stay this but if more content is added it will increase its height automatically
+            */
+            width: 80vw;
+            min-height: 80vh;
+            font-size: 18px;
+            margin: 23px auto;
+        }
+        .newbox p{
+            /*
+            ->this em will multiply the inherited fontsize by 2
+            ->if we give give the size of ROOT ie html {fontsize=12px}  then fontsize=2rem will give the size of this para 24px
+            */
+            font-size: 2em;
+        }
+        .mycont{
+            background-color: red;
+            color: yellow;
+            font-size: 22px;
+            /*
+            ->in this device ie laptop 100 vmin bascally means vh==vmin
+            ->but in phone vmin==vw
+            ->vmax it will be reverser in lap vmax=vw
+            */
+            width: 100vmin;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        this is a box
+    </div>
+    <div class="newbox">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam corrupti dolorem minus provident aspernatur voluptatibus doloribus obcaecati, voluptatem reprehenderit quibusdam culpa ducimus ab quam veniam neque reiciendis dolor distinctio. Dolores ducimus magni aperiam in velit voluptate id quos sed consectetur ea aspernatur nam, error expedita veritatis voluptatum provident incidunt ad vitae possimus saepe obcaecati illum porro.</p>
+        lorem11122
+    </div>
+    <div class="mycont">
+        i am another container
+    </div>
+</body>
+</html>

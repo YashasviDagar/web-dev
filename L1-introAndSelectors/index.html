@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <!-- <style>
+        div, span{
+            color: red;
+            background-color: yellow;
+        }
+    </style> -->
+    <!-- Element Selector -->
+     <style>
+        div{
+            background-color: red;
+        }
+        /* class selector */
+        .pink{
+            background-color: pink;
+        }
+        /* id selector */
+        #green{
+            background-color: green;
+        }
+        /* descendant selector-> it does matter where but says it should be inside the div */
+        div p {
+            color: blue;
+            background-color: brown;
+        }
+        /* child selector-> only applies to the direct child.*/
+        div > p{
+            color: blue;
+            background-color: brown;
+        }
+        /* universal selector */
+        *{
+            margin:10;
+            padding:0;
+        }
+        /* pseudo selector */
+        a:visited{
+            color: black;
+        }
+        a:link{
+            color: yellow; 
+        }
+        a:active{
+            background-color: red;
+            /* after clicking link its bg is red */
+        }
+        a:hover{
+            background-color: aqua;
+            /* without clicking link if cursor is on the top that bg color will be shown */
+        }
+        p:first-child{
+            background-color: blueviolet;
+        }
+         
+     </style>
+</head>
+<body>
+    <main class="one">
+        <p> I am First</p>
+        <p>I am Second</p>
+    </main>
+    <div>
+        I am yashasvi
+        <article>
+            <p>I am dagar</p>
+        </article>
+    </div>
+    <div class="pink">
+        Hey I want to learn CSS
+        <p>I am a para inside div</p>
+    </div>
+    <!-- Here all the div's will be of red color -->
+    <div id="green">
+        Yohohoho
+    </div>
+    <a href="https://www.google.com">Go To Google</a>
+    <a href="https://www.facebook.com">Go To Facebook</a>
+</body>
+</html>

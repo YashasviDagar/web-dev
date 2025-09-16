@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Lists</title>
+    <style>
+        nav ul li {
+            list-style: devanagari;
+            list-style-type: "👍";
+            background-color: yellow;
+            /*this is to make sure the number(marker) is inside the bg color*/
+            list-style-position: inside;
+            border: 2px solid black;
+        }
+        /* OVERFLOW */
+        .box{
+            width: 30vw;
+            height: 10vh;
+            border: 2px solid black;
+            overflow: auto;
+            overflow-x: hidden;
+            overflow-y: scroll;
+
+
+            /* overflow: scroll; --->shows the scroll even if it is fitted in the box */
+            /* white-space: nowrap; */
+            /* text-overflow: ellipsis;---> allows the .. in the box at the end of the one sentence*/
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Contact</li>
+        </ul>
+    </nav>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod doloremque a quasi ipsam consectetur optio fugit accusantium voluptates expedita, quae neque, ut porro quaerat explicabo non voluptas distinctio blanditiis nostrum. Culpa magni reiciendis eveniet voluptates molestiae excepturi odio magnam nesciunt quos debitis, mollitia laborum minus!
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+    <style>
+        /* this is global variable->ROOT */
+        :root{
+            --color: rgb(7, 147, 241);
+            --seccolor: rgb(57, 213, 26);
+            /* used as a padding */
+            --defpad: 23px;
+        }
+        *{
+            margin: 0;padding: 0;
+        }
+        ul{
+            display: flex;
+        }
+        ul li{
+            list-style: none;
+            padding: var(--defpad);
+            border: 2px solid var(--seccolor);
+        }
+        ul li:first-child{
+            /* with this we made the --color a not global variable, maybe a private or something */
+            --color: rgb(210, 12, 161);
+            background-color: var(--color);
+            /* background-color: var(--color, blue);
+            this blue to make sure that if the --color is not present then its takes up the given value */
+        }
+        .nav {
+            /* used the variable */
+            background-color: var(--color);
+        }
+        .container{
+            background-color: var(--seccolor);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Content</li>
+        </ul>
+    </div>
+    <div class="container">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eveniet, corporis doloremque. Unde culpa, excepturi
+        inventore voluptatibus id autem totam labore officia dolor minima velit doloremque atque. Illo deleniti ratione,
+        veniam eos ipsam, ad blanditiis perspiciatis fugiat hic officiis quibusdam a, debitis excepturi nostrum rem
+        consequatur.
+    </div>
+</body>
+
+</html>

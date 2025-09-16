@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            border: 2px solid blue;
+            /*->margin and padding lag jaige but not from top:bcz of inline
+        ->to remove this use inline-block*/
+            display: inline-block;
+            padding: 30px;
+            margin: 30px;
+            width: 90px;
+        }
+        /* if you use display:none ---> it will remove the box and its space from the web!
+        but if you use visibility:hidden--->it will remove the box but the space will be there1 */
+    </style>
+</head>
+
+<body>
+    <div class="box">I am a Box</div>
+    <div class="box">I am a good box</div>
+    <span>I am</span>
+    <span>Yashasvi</span>
+</body>
+
+</html>

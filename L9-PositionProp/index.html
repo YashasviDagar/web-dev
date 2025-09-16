@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* The position of a box is static in default.. to make changes change its position property */
+        .box1 {
+            background-color: aqua;
+            /* STICKY POSITION */
+            position: sticky;
+            top: 0;
+            height: 111px;
+
+
+
+            /* ABSOLUTE POSITION */
+            /* position: absolute; */
+            /*So here the pos is absolute and it will take the relative with its next positionaled ancestor in this html
+            -->is i make parent class abs then it will be realtive to the parent class here*/
+            /* top: 0px;
+            left: 0px; */
+
+        }
+
+        .box2 {
+            background-color: azure;
+            /* position: relative;
+            top: 34px;
+            left: 56px; */
+        }
+
+        .box3 {
+            background-color: antiquewhite;
+            /* FIXED POSITION-> Cannot be changed even if we scroll */
+            /* position: fixed;
+            bottom: 0px;
+            left: 25vw; */
+        }
+
+        .box4 {
+            background-color: purple;
+        }
+
+        .box {
+            height: 133px;
+            width: 80vw;
+            padding: 3px;
+            margin: 3px;
+            border: 2px solid black;
+        }
+
+        .parent {
+            position: absolute;
+
+            /*EXCEPTIONS:transform, filter, or perspective properties can also make an element appear as positioned 
+            ->this translate works the same*/
+            /* transform: translate(0); */
+            /* filter: invert(0); */
+            /* perspective: 0em; */
+
+            padding: 433px;
+            margin: 34px;
+            border: 2px solid purple;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+        <div class="box box4"></div>
+    </div>
+</body>
+
+</html>
