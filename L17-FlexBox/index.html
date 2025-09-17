@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox</title>
+    <style>
+        .container {
+            border: 2px solid red;
+            /* here used flex so that on container we can use the flex properties */
+            display: flex;
+            height: 80vh;
+
+            /* MOST IMPORTANT--justify-content(it will set acc to the main axis..in column main axis y axis!) and allign-items... se aap boxes ko center pe late h!  */
+
+            /* justify-content: center; */
+            align-items: center;
+
+            /* FLEXbox mein left->right lay nahi hote they are layed with the flex-direction!  */
+            /* flex-direction: column; */
+
+
+            /* it wraps the data just like in gallery all the pics are wrap under one another */
+            flex-wrap: wrap;
+
+
+            /* We use allign-content when we have more data i.e in more than one line:- */
+            /* align-content: flex-start; */
+            /* there is no justify-items  in flexbox; */
+
+
+            /* flex-flow: row wrap; */
+
+            /* gap: 30px; 
+            row-gap: 40px;
+            column-gap: 10px; */
+            /* <row gap> <column gap> */
+            gap: 40px 10px;
+
+        }
+
+        .item {  
+            /* this mean the all the items will take equal space if a particular item's flex-grow is 2 that means it will the space of 2 item that are present in the container */
+            /* flex-grow: 1; */
+
+
+            height: 92px;
+            width: 92px;
+            border: 2px solid black;
+            /* margin: 4px; */
+            background-color: blueviolet;
+        }
+
+        .order-1{
+            /* jitna zyda order voh utna end mein aayega */
+            order: 1;
+        }
+        .order-2{
+            order: 2;
+        }
+        .order-3{
+            order: 3;
+        }
+
+        .item1{  
+            /* flex-grow: 2; */
+
+            /* here if the items are alligned and screen ko choto kra ja rha plus the wrapping is on then the first item (item1 herre) will shrink with the min of 2 with 2x speed */
+            /* flex-shrink: 2; */
+
+            /* first remove aligncontent::::- changing its own properties acc to the container */
+            align-self: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+
+    <main>
+        <div class="container">
+            <div class="item item1">1</div>
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item order-1">4</div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            
+        </div>
+    </main>
+
+</body>
+
+</html>
