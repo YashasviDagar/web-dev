@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        .container {
+            border: 2px solid black;
+            display: grid;
+            /* here it is divided into parts but with same name... so first whole row is for navigation bar! */
+            /* !!!!!! grid-template-areas is used instead of columns */
+            grid-template-areas: "nav nav nav"
+                "side article article"
+                "footer footer footer";
+        }
+
+        .item {
+            border: 2px solid red;
+            height: 55px;
+            /* give width so that the item one doesnt take the whole space */
+        }
+
+        .item-1 {
+            grid-area: nav;
+            background-color: aqua;
+        }
+
+        .item-2 {
+            grid-area: side;
+            background-color: beige;
+        }
+
+        .item-3 {
+            grid-area: article;
+            background-color: azure;
+        }
+
+        .item-4 {
+            grid-area: footer;
+        }
+        /* this is overlapping wiht 1 */
+        .item-5 {
+            grid-area: nav;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item item-1">1</div>
+        <div class="item item-2">2</div>
+        <div class="item item-3">3</div>
+        <div class="item item-4">4</div>
+        <div class="item item-5">5</div>
+    </div>
+</body>
+
+</html>
